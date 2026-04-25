@@ -1,0 +1,112 @@
+@charset "ISO-8859-1";
+
+@import
+	url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,400&display=swap')
+	;
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "Montserrat", sans-serif !important;
+	
+}
+
+*::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+}
+
+header {
+	background-color: rgb(172, 105, 105);
+	display: flex;
+	justify-content: flex-end;
+	align-content: center;
+	padding: 30px 4%;
+	align-items: center;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+	box-shadow: 0px 2px 10px 10px #a0a0a0;
+	margin-bottom:5px;
+}
+
+li, a, button {
+	font-family: "Montserrat", sans-serif;
+	font-weight: 500;
+	font-size: 16px;
+	color: white;
+	text-decoration: none;
+}
+
+header div {
+	color: white;
+	display: flex;
+	align-items: flex-end;
+	margin-right: auto;
+}
+
+header img {
+	cursor: pointer;
+	width: 50px;
+	height: 50px;
+}
+
+header ul {
+	list-style: none;
+}
+
+header li {
+	display: inline-block;
+	padding: 0px 20px;
+}
+
+header li:last-child {
+	margin-right: 100px;
+}
+
+header li a {
+	trasition: all 0.3s ease 0s;
+}
+
+header nav ul li a:hover {
+	border-bottom: 2px solid white;
+	text-decoration: none;
+	color:white;
+}
+
+header nav ul li a:hover ~  body {
+ overflow: hidden;
+}
+
+
+header button {
+	color: white;
+	padding: 9px 35px !important;
+	background-color: rgb(216, 181, 181);
+	border: none;
+	border-radius: 50px;
+	curser: pointer;
+	trasition: all 0.3s ease 0s;
+}
+
+header a button:hover {
+	background-color: white;
+	color: rgb(216, 181, 181);
+}
+
+
+/*Drop down*/
+
+
+header  a:visited{
+  color:white;
+}
+
+header nav ul li div a{
+	color : rgb(216, 181, 181) !important;
+}
+
+header nav ul li div a:visited{
+	color : rgb(216, 181, 181) !important;
+}
+
+
