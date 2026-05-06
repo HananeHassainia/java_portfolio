@@ -1,0 +1,524 @@
+/*
+Projet CV
+HASSAINIA Hanane
+04/03/2022
+*/
+
+/*BODY*/
+body {
+  margin-left: 3%;
+  margin-right: 3%;
+  text-align: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  position: relative;
+}
+
+/*HEADER*/
+#titre {
+  color: white;
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.5)),
+   url(../images/info2.jpg);
+  background-size: cover;
+  padding: 3.5%;
+  margin-bottom: 35px;
+  box-shadow: 12px 12px 2px 1px rgba(124, 122, 122, 0.6);
+  width: auto;
+}
+
+#titre h2 {
+  font-size: 200% ;
+}
+
+
+h1 {
+  font-size: 400%;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+/*CORPS*/
+h3 {
+  border-bottom: solid;
+  padding-top: 1.5%;
+  padding-bottom: 1.5%;
+  padding-left: 1.5%;
+  border-color: rgba(59, 134, 156, 0.1);
+  color: rgb(59, 134, 156);
+  text-align: left;
+}
+#corpT {
+  position: absolute;
+  display: grid;
+  row-gap: 20px;
+  bottom: auto;
+  grid-template-columns: 300px 1fr;
+  width: 100%;
+  height: 100%;
+}
+
+/*PARTIE DROITE*/
+.Info {
+  background-color: white;
+  filter: drop-shadow(0 0 0.75rem gray);
+  grid-column: 2/6;
+  text-align: left;
+  padding-bottom: 2%;
+}
+
+#apropos {
+  grid-row: 2;
+}
+
+#experience {
+  grid-row: 3;
+}
+
+#projet {
+  grid-row: 4;
+}
+#competence {
+  grid-row: 5;
+}
+
+#lieuFormation {
+  font-weight: normal;
+}
+
+#envTech {
+  font-weight: normal;
+}
+/*PARTIE GAUCHE */
+#infoCote {
+  background-color: white;
+  grid-column: 1;
+  grid-row: 1;
+  filter: drop-shadow(0 0 0.75rem gray);
+  margin-right: 10%;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  flex-grow: 1;
+  overflow: scroll;
+}
+
+#nom {
+  font-size: 180%;
+  filter: drop-shadow(0 0 0.75rem gray);
+  padding: 2%;
+  background-color: white;
+  margin-top: 5%;
+  font-weight: bolder;
+  font-style: initial;
+  margin-bottom: 10%;
+}
+
+/*MENU NAV*/
+.menu {
+  grid-row: 1;
+  background-color: white;
+  filter: drop-shadow(0 0 0.75rem gray);
+  grid-column: 2/6;
+  display: inline-flex;
+  border-bottom: solid;
+  border-bottom: 1.5%;
+  border-color: rgb(124, 150, 71);
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  z-index: 10;
+  width: 100%;
+}
+
+.menu a {
+  width: 25%;
+  border: white;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 100%;
+  background-color: white;
+  color: rgb(124, 150, 71);
+  font-weight: bolder;
+  text-decoration: none;
+  margin-top: 0;
+  padding: 1.2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu a:hover {
+  background-color: rgb(124, 150, 71);
+  color: white;
+}
+
+/*PARTIE DROITE*/
+
+#competence article {
+  padding-left: 5%;
+}
+
+#competence ul {
+  padding-right: 5%;
+}
+#competence h4 {
+  color: rgb(124, 150, 71);
+  border-bottom: solid;
+  border-bottom: 1.5%;
+  border-color: rgb(124, 150, 71, 0.1);
+}
+
+ul {
+  list-style: none;
+  font-weight: lighter;
+}
+
+table {
+  border-spacing: 40px 0.5rem;
+  font-weight: bolder;
+}
+
+.parFormation {
+  font-weight: lighter;
+  color: gray;
+  padding-bottom: 3%;
+}
+
+li {
+  list-style: none;
+  font-weight: lighter;
+  margin-top: 0%;
+  padding-bottom: 1%;
+  text-align: justify;
+}
+
+#lieu {
+  font-weight: lighter;
+  color: gray;
+  font-style: italic;
+}
+
+.parFormation {
+  padding-bottom: 0%;
+}
+
+#apropos a {
+  color: gray;
+  text-decoration: none;
+}
+
+#apropos a:hover {
+  color: rgb(172, 76, 76);
+  font-weight: bold;
+}
+
+#date {
+  text-align: left;
+  color: rgb(124, 150, 71);
+   min-width: 100px;
+}
+
+#projet #date {
+  width: 6%;
+  text-align: left;
+}
+#experience #date {
+  width: 15%;
+}
+
+.b {
+  display: block;
+  width: 30px;
+  height: 30px;
+  float: right;
+  margin-right: 1.5%;
+  border-radius: 50%;
+  text-align: center;
+  font-weight: bold;
+  background-color: white;
+  color: rgb(59, 134, 156);
+  border: solid;
+  border-color: rgb(59, 134, 156);
+}
+
+.b:hover {
+  background-color: rgb(59, 134, 156);
+  color: white;
+  cursor: pointer;
+}
+
+#corpT p {
+  color: rgb(172, 76, 76);
+  font-style: lighter;
+}
+
+#projet #date {
+  width: 6%;
+    align-self: flex-start;
+
+}
+
+/*PARTIE GAUCHE*/
+#presentation {
+  text-align: justify;
+  margin: 21px;
+  color: gray;
+  font-size: 100%;
+  padding-bottom: 10%;
+}
+
+#infoCote h4 {
+  color: rgb(59, 134, 156);
+  margin: 21px;
+  text-align: left;
+  border-bottom: solid;
+  padding-bottom: 15px;
+  border-color: rgb(59, 134, 156, 0.1);
+}
+
+.icon {
+  height: 8%;
+  width: 8%;
+  border: solid rgb(172, 76, 76);
+  padding: 3%;
+  border-radius: 35%;
+  margin: 0;
+  margin-right: 8%;
+  margin-left: 20px;
+  background-color: rgb(172, 76, 76);
+  filter: drop-shadow(0 0 0.75rem rgb(204, 204, 204));
+}
+
+#infoCote article a {
+  text-decoration: none;
+  color: gray;
+}
+
+#infoCote article a:hover {
+  color: rgb(172, 76, 76);
+  font-weight: bold;
+}
+
+#infoCote article div {
+  padding: 0% 0% 10% 0%;
+}
+
+#linkedin {
+  margin-top: 0;
+  margin-bottom: 2%;
+  width: 15%;
+}
+
+#linkedin2 {
+  width: 45%;
+  margin-top: 0;
+}
+
+.excludeImages {
+  width: 100px;
+  height: 100px;
+  box-shadow: 6px 6px 2px 1px rgba(124, 122, 122, 0.6);
+}
+
+#telecharger {
+  padding: 5%;
+  margin-bottom: 5%;
+  border: solid 3px rgb(124, 150, 71);
+  filter: drop-shadow(0 0 0.75rem rgb(204, 204, 204));
+  background-color: rgb(124, 150, 71);
+  color: white;
+  font-size: 100%;
+  transition: all 0.4s ease-out;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 50px;
+}
+
+#telecharger:hover {
+  background-color: white;
+  color: rgb(124, 150, 71);
+}
+
+#ballonbtn {
+  margin-bottom: 10%;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  border-radius: 50px;
+  padding: 5%;
+  margin: 5%;
+  font-size: 110%;
+  border: solid 3px rgb(59, 134, 156);
+  filter: drop-shadow(0 0 0.75rem rgb(204, 204, 204));
+  background-color: rgb(59, 134, 156);
+  color: white;
+  font-weight: bold;
+  transition: all 0.4s ease-out;
+}
+
+#ballonbtn:hover {
+  color: rgb(59, 134, 156);
+  background-color: white;
+  cursor: pointer;
+}
+
+#divBallon {
+  position: absolute;
+  color: red;
+  z-index: 10;
+}
+
+#balloon-container {
+  height: 150%;
+  padding: 1em;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.balloon {
+  height: 125px;
+  width: 105px;
+  border-radius: 75% 75% 70% 70%;
+  position: relative;
+}
+
+.balloon:before {
+  content: "";
+  height: 75px;
+  width: 1px;
+  padding: 1px;
+  background-color: #fdfd96;
+  display: block;
+  position: absolute;
+  top: 125px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.balloon:after {
+  content: "▲";
+  text-align: center;
+  display: block;
+  position: absolute;
+  color: inherit;
+  top: 120px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+@keyframes float {
+  from {
+    transform: translateY(100vh);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-300vh);
+    opacity: 0;
+  }
+}
+#photoMoi {
+  width: 100px;
+  height: 100px;
+  margin-top: 17%;
+  box-sizing: border-box;
+  border: 5px white solid;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.8);
+  transform: translatey(0px);
+  width: 70%;
+  height: auto;
+  background-color: rgb(172, 76, 76);
+  animation: float2 3s ease-in-out infinite;
+}
+@keyframes float2 {
+  0% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
+  50% {
+    box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+    transform: translatey(-20px);
+  }
+  100% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.ci {
+  width: 65%;
+  margin: 4%;
+  border: solid 2px rgb(223, 221, 221);
+  background-color: rgb(223, 221, 221);
+  filter: drop-shadow(0 0 0.75rem gray);
+}
+
+.ci:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+/*PARTIE EN DEHORS DU CORPS : LA FLECHE POUR REMONTER EN HAUT DE L'ECRAN*/
+#fleche {
+  background-color: green;
+  padding: 1%;
+  color: white;
+  text-align: center;
+  font-size: 160%;
+  background-color: rgba(128, 128, 128);
+  opacity: 0.5;
+  text-decoration: none;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  margin-right: 1%;
+}
+
+#fleche:hover {
+  opacity: 1;
+}
+
+/*PARTIE DROITE : CARROUSEL*/
+#container {
+  height: 250px;
+  overflow: hidden;
+}
+
+.articleHide {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.bouton {
+  position: absolute;
+  cursor: pointer;
+  top: 46%;
+  font-size: 150%;
+  font-weight: bold;
+  padding: 1%;
+  opacity: 0.5;
+  background-color: rgb(172, 105, 105);
+  color: white;
+}
+
+.bouton:hover {
+  opacity: 1;
+}
+#g {
+  left: 0;
+}
+
+#d {
+  right: 0;
+}
+
+#page2,
+#page3 {
+  display: none;
+}
+
+#dcompetence {
+  width: 100%;
+}

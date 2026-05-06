@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.debug.js"></script>
+    <script type="text/javascript" src="/02_cv/js/splide.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-3.6.0.js"></script>
+    <script type="text/javascript" src="../js/cv.js"></script>
+    <link rel="stylesheet" href="../css/cv.css" />
+
+    <title>CV Hassania Hanane</title>
+  </head>
+
+  <body>
+
+    <!--le header contient le titre du cv situé en haut de la page-->
+    <header>
+      <div id="titre">
+        <h1 >RECHERCHE ALTERNANCE IA</h1>
+        <h2>1 semaine école / 2 semaines d’entreprise</h2>
+      </div>
+    </header>
+
+    <!--le corps de la page est divisé en deux partie : la partie de gauche et celle de droite-->
+    <div id='corpT' >
+
+      <!--la partie gauche du corps de la page contient une image, le nom, une petite phrase de présentation 
+          ainsi que une map, des liens pour appeler et envoyer un mail et être redirigé vers le profil linkedin
+          On y trouve en plus, deux boutons: un pour télécharger un cv en pdf et un autre pour activer une animation
+          Lorsque l'on rabat les compartiments de droite (id: InfoDroite), cette partie rétrécie aussi mais les informations peuvent toujours être regardées en scrollant
+        -->
+      <section id="infoCote">
+        <!--Partie nom + image qui flotte-->
+        <img id="photoMoi"src="../images/photoCV.JPG" />
+        <div id="nom">
+          <p>HASSAINIA Hanane</p>
+        </div>
+        
+        <!--Boutons-->
+        <input type="button" id="ballonbtn"  onclick="timeBallon(150)" value="Surprise"/>
+        <br>
+        <br>
+        <a id="telecharger" href="../images/CValternance2.pdf" download="cvHassainiaHanane">Télécharger le CV</a>
+        
+        <!--Phrase de présentation-->
+        <article>
+          <br>
+          <br>
+          <h4>A PROPOS</h4>
+          <p id="presentation">
+Admise en Master 1 Expert en Intelligence Artificielle à Ynov, je recherche une alternance afin de développer mes compétences en data et machine learning. Issue d’un parcours en bioinformatique et disposant de bases en programmation (Python, Java), je souhaite contribuer à des projets concrets en intelligence artificielle.          </p>
+        </article>
+
+        <!--Coordonnées : lien téléphone, lien mail, map-->
+        <article>
+          <h4>COORDONNEES</h4>
+          
+          <div>
+            <img class="icon" src="../images/tel.png">
+            <br>
+            <a href="tel:+33750907602">07 ** ** ** **</a>
+          </div>
+            
+          
+          <div>
+            <img class="icon" src="../images/mail3.jpg">
+            <br>
+            <a href="mailto:HassainiaHananepro@gmail.com">Hassainiahananepro@gmail.com</a>
+          </div>
+          
+          <div>
+            <img class="icon" src="../images/lieu2.png" >
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d90493.79681531653!2d-0.6560516380568434!3d44.86369639576376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd5527e8f751ca81%3A0x796386037b397a89!2sBordeaux!5e0!3m2!1sfr!2sfr!4v1646151830703!5m2!1sfr!2sfr" width="240" height="230" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+
+        </article>
+
+        <!--lien linkedin sur l'icon linkedin + qrCode-->
+        <article>
+          <h4>RESEAUX SOCIAUX</h4>
+              <a href="https://www.linkedin.com/in/hanane-hassainia-2328ab224/" target="_blank"><img  id="linkedin" src="../images/linklogo.png" ></a>
+              <br>
+              <img id="linkedin2" src="../images/linkedin.jpg">
+          
+        </article>
+
+        <!--Liens vers film, vidéo de cuisine et lien vers résumé roman-->
+        <article>
+          <h4>CENTRES D'INTERÊTS</h4>
+          
+          <iframe class="ci" src="https://www.youtube.com/embed/3utCtVG1Gh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <p>Cuisine</p>
+          <a href="https://www.guillaumemusso.com/livres/la-fille-de-brooklyn-9782845638082" target="_blank"><img class='ci' src="../images/lecture.jpg"></a><br/>
+          <p>Lecture</p>
+          <a href="https://www.allocine.fr/film/fichefilm_gen_cfilm=863.html" target="_blank"><img class='ci' src="../images/cinema.jpg"></a>
+          <p>Cinema</p>
+        </article>
+      </section>
+
+      <!--la partie droite du corps de la page contient un menu et 4 sections différentes 
+          qui contiennet chacune un bouton qui leur permettant d'être rabattues-->
+      <div id="InfoDroite">
+
+          <!--Le menu horizontale est constamment affiché à l'écran et suit la trajectoire de la fenêtre.
+              Il est constitué de liens permettant de se diriger directement vers la partie souhaitée
+          -->
+          <nav class="menu">
+            <a href="#apropos">FORMATIONS</a>
+            <a href="#experience">EXPERIENCES PROFESIONNELLES</a>
+            <a href="#projet">PROJETS UNIVERSITAIRES</a>
+            <a href="#competence">COMPETENCES</a>
+          </nav>
+
+
+          <!--Première section de la partie droite  : contient les formations : affiché sous la forme d'un tableau 
+          chaque formation est associée à un lien qui redirige vers les sites contenants les details de chacune d'elles 
+          -->
+          <section class="Info" id="apropos">
+              
+            <h3>
+              FORMATIONS
+              <input type="button" id="h3Formation" class="b" onclick="hide('h3Formation','tableFormation')" value="-"/>
+            </h3>
+              
+            
+            <table id="tableFormation" bac>
+              <tr>
+                <td class="gauche" id="date">2022</td>
+                <td>Formation JAVA Fullstack - <i id="lieuFormation">Adaming / INTI Formation (Distanciel)</i></td>
+              </tr>
+
+              <tr>
+                <td class="gauche"></td>
+                <td class="parFormation">
+                  UML : Les Concepts Objets, JAVA : Les fondamentaux; Les Design Patterns; Le développement Frontend : Html, CSS, Bootstrap, Javascript, Jquery, Angular JS; Le Framework JEE et son écosystème: JSP/Servlet, SF SPRING (Spring BATCH, Spring SECURITY, Spring MVC, Spring DATA); Language XML : JAXB, XSD, XSL; Les services et SOA : JAX-RS, JAX-WS, Architecture REST; Les ORM et SGBD : Mysql, Oracle, PL/SQL, JPA, Hibernate; Méthodes Agiles : XP, SCRUM.
+
+                </td>
+              </tr>
+              <tr>
+
+              <tr>
+                <td class="gauche" id="date">2019 – 2021</td>
+                <td>Master en Bioinformatique parcours du génome aux écosystèmes - <i id="lieuFormation">Université de Bordeaux 1 (Talence)</i></td>
+              </tr>
+
+              <tr>
+                <td class="gauche"></td>
+                <td class="parFormation">
+Intelligence artificielle (python) , Modélisation cellulaire (R, python), Bioinformatique structurale (Blender, python), DEA (Machine learning, réseau de neurones, python, Tulip), Omiques et Bioinformatique (python), BioStatistiques (R), Imagerie (JavaScript, imageJ), Algorithmie, Base de données (python , sql), Modélisation (C++ , JS , HTML , CSS).
+                </td>
+              </tr>
+              <tr>
+               
+              </tr>
+              <tr>
+                <td class="gauche" id="date">2016 – 2019</td>
+                <td>Licence Sciences de la vie mention écologie - 
+                  <i id="lieuFormation">Université de Bordeaux 1 (Talence)</i></td>
+              </tr>
+
+              <tr>
+                <td class="gauche"></td>
+                <td class="parFormation">
+                  
+                </td>
+              </tr>
+              <tr>
+                <td class="gauche" id="date">2016</td>
+                <td> Baccalauréat Scientifique spécialité science de la vie - <i id="lieuFormation">Lycée Vaclav Havel (Bègles)</i></td>
+              </tr>
+            </table>
+          </section>
+
+          <!--Deuxième section de la partie droite : constituée d'un tableau qui retranscrit les informations de certaines expériences profesionnelles -->
+          <section class="Info" id="experience">
+            <h3>
+              EXPERIENCES PROFESIONNELLES
+              <input type="button" id="h3Experience" class="b" onclick="hide('h3Experience','tExperience')" value="-"/>
+
+            </h3>
+            <table id="tExperience">
+              
+
+              <tr>
+                <td class="gauche" id="date">2023-2024</td>
+                <td>Cartographe / Assistante Chef de Projet  </td>
+              </tr>
+              <tr>
+                <td class="gauche"></td>
+                <td id="lieu">
+                  Suez - Bordeaux
+                </td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td>
+                  <ul>
+                    <li>
+                      - Création, mise à jour et optimisation des plans de collecte de déchets pour la Communauté d’Agglomération de La Rochelle.
+                    </li>
+                    <li>
+                     - Intermédiaire entre le bureau d’études et l’exploitation.
+                    </li>
+                    <li>
+                      - Formation des attachés d’exploitation aux outils Systèmes d’Information (Collect, QGIS).
+
+                    </li>
+                    <li>
+                      - Gestion de projet et coordination des équipes.
+
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <p id="envTech">
+                    Environnement technique : Collect +, QGIS, python
+                  </p>
+                </td>
+              </tr>
+
+
+
+
+
+
+
+              <tr>
+                <td class="gauche" id="date">2021</td>
+                <td>Ingénieur d’étude en Bioinformatique  </td>
+              </tr>
+              <tr>
+                <td class="gauche"></td>
+                <td id="lieu">
+                  Centre de recherche en cancérologie (CRCL) et Ecole supérieur
+                  national – Lyon
+                </td>
+              </tr>
+              <tr>
+                <td class="gauche"></td>
+                <td class="parFormation">
+                  Stage de fin d'étude Master Bioinformatiques
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>
+                  <ul>
+                    <li>
+                      - Comprendre les mécanismes de la transformation tumoral des
+                      cellules épithéliales mammaires humaines en étudiant la
+                      distribution des flux métaboliques
+                    </li>
+                    <li>
+                      - Construction de plusieurs réseaux métaboliques utilisant des
+                      algorithmes classiques (Flux Balance Analysis) en intégrant
+                      les données expérimentales
+                    </li>
+                    <li>
+                      - Construction d’un réseau métabolique utilisant des algorithmes
+                      basés sur les méthodes bayésiennes en intégrant les données
+                      expérimentales
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <p id="envTech">
+                    Environnement technique : Python (package COBRApy), Matlab
+                    (Cobra toolbox), Cytoscape
+                  </p>
+                </td>
+              </tr>
+            </table>
+          </section>
+
+          <!--Troisième section de la partie droite : constituée d'un tableau qui retranscrit les informations de certains projets universitaires -->
+          <section class="Info" id="projet">
+            <h3 >
+              PROJETS UNIVERSITAIRES
+              <input type="button" id="h3Projet" class="b" onclick="hide('h3Projet','tProjet')" value="-"/>
+            </h3>
+            <table id="tProjet">
+              <tr>
+                <td class="gauche" id="date">3 mois</td>
+                <td>Modélisation Web - Master Bioinformatique </td>
+              </tr>
+              <tr>
+                <td class="gauche"></td>
+                <td class="parFormation">Création d’un site web</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>
+                  <ul>
+                    <li>
+                      Visualisation des repères morphologiques sur des images de
+                      scarabés importées par l'utilisateur
+                    </li>
+                    <li>
+                      Comparaison de données expérimentales (repères morphologiques)
+                      avec des données issues d’algorithmes de machine learning
+                    </li>
+                    <li>
+                      Affichage de graphiques dynamiques des données importées.
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <p>Environnement technique : HTML, CSS, JavaScript</p>
+                </td>
+              </tr>
+
+              <tr>
+                <td class="gauche" id="date">1 mois</td>
+                <td>Modélisation cellulaire - Master Bioinformatique  </td>
+              </tr>
+              <tr>
+                <td class="gauche"></td>
+                <td class="parFormation">Modélisation d’un mécanisme biologique</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>
+                  <ul>
+                    <li>
+                      Etude du mécanisme de liaison d’un neurotransmetteur à son
+                      récepteur à l’aide d’un ion
+                    </li>
+                    <li>
+                      Modélisation des trois molécules en trois dimensions et du
+                      mécanisme de liaison
+                    </li>
+                    <li>Modélisation testée sous différentes conditions</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <p>Environnement technique : Blender, MCell, Python</p>
+                </td>
+              </tr>
+            </table>
+          </section>
+
+          <!--Quatrième et dernière section : constitué d'un carouselle qui permet de défiler et d'afficher les compétences en fonction de leurs catégories -->
+          <section class="Info" id="competence">
+            <h3>
+                COMPETENCES
+                <input type="button" id="h3Competence" class="b" onclick="hide('h3Competence', 'dcompetence')" value="-"/>
+            </h3>
+            <div id="dcompetence">
+              <div id="container">
+                <article class="articleHide" id="page1">
+                <h4>Informatique</h5><br>
+                    
+                    <ul >
+                        <li>Langages de programmation : Python, SQL,  R, HTML, CSS,  Javascript</li>
+                        <li>Bureautique : Word, Excel, PowerPoint, Overleaf</li>
+                        <li>Systèmes d’exploitations : Linux, Windows, MacOs</li>
+                        <li>Environnement de développement : Spyder, Rstudio</li>
+                      </ul>
+                </article>
+
+                <article class="articleHide" id="page2">
+                  <h4>Autres compétences</h4> 
+                      <ul>
+                          <li>Logiciel SGBD : postgreSQL</li>
+                          <li>Logiciel Blender : Modélisation </li>
+                          <li>Logiciel ImageJ : Analyse d’image</li>
+                          <li>Logiciel IGV : Visualisation de données génomiques</li>
+                          <li> Cytoscape  : Visualisation et analyse de réseaux d’intéractions moléculaires</li>
+                          <li>Logiciel Copasi : Création et résolution des modèles mathématiques de processus biologiques (Réseaux métaboliques, voies de signalisations, …)</li>
+                      </ul>       
+                </article>
+                
+                <article class="articleHide" id="page3">
+                <h4>Langues</h4>	
+                  <ul>
+                      <li>Anglais B2-C1</li> 
+                  </ul>	
+                </article>
+            </div>
+            <span class="bouton" id="d"> ❯ </span>
+            <span class="bouton" id="g"> ❮ </span>
+            
+            </div>
+            
+          </section>
+      </div>
+ 
+    <!--Ce compartiment sert à acceuillir les ballons de l'animation qui est activé lorsque l'on clique sur le bouton surprise-->
+    </div>
+    <div id="divBallon">
+    </div>
+    </div>
+
+    <!--Lien qui permet de remonter en haut de la page -->
+    <a href="#" id="fleche" > 🡱 </a>
+  </body>
+</html>
