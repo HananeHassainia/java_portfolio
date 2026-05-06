@@ -1,0 +1,89 @@
+<header>
+	<div class="nomLogo">
+
+		<p>
+
+			<a id="titreHeader" href="<c:url value='/intHome'/>">Java<span
+				id="esp1">&</span>Rien
+			</a>
+
+		</p>
+
+	</div>
+	<nav id="navHeader">
+		<ul id="ulNavBar">
+			<li id="inputSearch">
+				<form class="form-horizontal" method="post"
+					action="submitGetProdAll"
+					style="text-align: center; width: 800px; margin: 0 auto;">
+					<div class="form-group" style="float: left;">
+						<input id="inputRecherche" type="text" class="form-control"
+							placeholder="Rechercher un produit" name="pMotCleProd" />
+					</div>
+
+					<button id="boutonChercher" type="submit">
+						<img src="./assets/images/loop.png" />
+					</button>
+				</form>
+			</li>
+
+			<c:choose>
+				<c:when test="${not empty client}">
+					<li class="nav-item dropdown"><a
+						class="nav-link dropdown-toggle" id="navbarDropdown" role="button"
+						data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+						href="<c:url value='/displayEspaceClient'/>">${client.nom}
+							${client.prenom} </a>
+						<div id="divdeco" class="dropdown-menu"
+							aria-labelledby="navbarDropdown">
+
+							<a id="deco" class="dropdown-item"
+								href="<c:url value='/displayEspaceClient'/>">Informations</a>
+							<div class="dropdown-divider">
+								<hr>
+							</div>
+
+							<a id="deco" class="dropdown-item"
+								href="<c:url value='/cltHome'/>">Historique des commandes</a>
+							<div class="dropdown-divider">
+								<hr>
+							</div>
+
+							<a id="deco" class="dropdown-item"
+								href="<c:url value='decoClient'/>">Se deconnecter</a>
+
+
+						</div></li>
+				</c:when>
+				<c:otherwise>
+					<li><a href="<c:url value='/displayEspaceClient'/>">EspaceClient</a>
+					</li>
+				</c:otherwise>
+			</c:choose>
+			<li id="panierli"><a href="<c:url value='/displayPanier'/>">Panier</a>
+				<c:if test="${not empty panier}">
+					<div class="circle">${panier.size()}</div>
+
+				</c:if></li>
+
+
+		</ul>
+	</nav>
+</header>
+
+
+
+<nav class="navCat">
+	<ul>
+		<c:forEach var="cat" items="${listCat}">
+			<li>
+				<form class="boutonNavCat" method="post" action="displayProdByCat">
+					<input type="text" value="${cat.id}" name="pIdCategorie"
+						style="display: none;" />
+					<button id="${cat.nomCategorie}" type="submit">${cat.nomCategorie}</button>
+				</form>
+			</li>
+		</c:forEach>
+
+	</ul>
+</nav>

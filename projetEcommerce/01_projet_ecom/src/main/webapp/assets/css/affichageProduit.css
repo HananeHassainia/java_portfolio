@@ -1,0 +1,275 @@
+@charset "ISO-8859-1";
+
+.sectionAllProduit {
+	display: grid;
+	margin: 2%;
+	grid-template-columns: 1fr 4fr;
+	column-gap: 4rem;
+}
+
+.sectionAllProduit article {
+	border: solid 1px #efefef;
+	background-color: white;
+	padding: 25px;
+	box-shadow: 0 3px 7px rgba(0, 0, 0, 0.25), 0 2px 2px rgba(0, 0, 0, 0.22);
+	border-radius: 4px;
+}
+
+#section1 {
+	grid-column: 1;
+	padding-top: 10%;
+}
+
+#section1 div {
+	float: left;
+	width: 100%;
+	padding-bottom: 7%;
+}
+
+#section1 div p:first-child {
+	padding-bottom: 3%;
+	text-align: center;
+	border-bottom: 2px solid #c4d5ec;
+	font-size: 23px;
+}
+
+#section2 {
+	grid-column: 2;
+	display: grid;
+}
+
+.divGauche {
+	display: grid;
+	margin-bottom: 1%;
+	align-items: flex-start;
+	justify-content: flex-start;
+}
+
+.divImage {
+	grid-column: 1;
+	grid-row: 1/3;
+	width: 240px;
+	height: 200px;
+	margin-right: 15px;
+}
+
+.divImage img {
+	width: 240px;
+	height: 200px;
+}
+
+#separation {
+	border-bottom: 1px solid #c0c0c0;
+	width: 110%;
+	margin-bottom: 2%;
+	text-align: center;
+}
+
+#designationP {
+	grid-column: 2;
+	grid-row: 1;
+	font-weight: bold;
+	font-size: 20px;
+	text-decoration: underline;
+}
+
+#descriptionP {
+	grid-column: 2;
+	grid-row: 2;
+	display: grid;
+	width: 50%;
+	text-align: left;
+	display: flex;
+	justify-content: flex-start;
+	width: 100%;
+}
+
+.formPrix {
+	grid-column: 2;
+	width: 100%;
+}
+
+.formPrix p {
+	color: red;
+	font-size: 30px;
+}
+
+.formPrix button {
+	bottom: 30px;
+}
+
+.formAff {
+	grid-column: 1;
+}
+
+.divPrix {
+	z-index: 0;
+}
+
+#categorieSearch button {
+	background-color: white;
+	text-decoration: none;
+	border: none;
+	padding: 2%;
+	color: rgb(197, 167, 142);
+}
+
+#categorieSearch form {
+	color: rgb(197, 167, 142);
+}
+
+#categorieSearch button:hover {
+	text-decoration: underline;
+}
+
+#unProduitPanier {
+	display: grid;
+	border: 1px solid #efefef;
+	padding: 2%;
+	margin: 2%;
+	background-color: white;
+	border-radius: 5px;
+	grid-template-columns: 5fr 1fr;
+}
+
+#bodyPanier {
+	background-color: #fafafa;
+}
+
+#divImgDesign {
+	grid-column: 1;
+}
+
+#divDesImg {
+	display: flex;
+}
+
+#panierImg {
+	
+}
+
+#pDesignationPanier {
+	width: 100%;
+	font-size: 30px;
+}
+
+#prixProdPanier {
+	grid-row: 1;
+	grid-column: 2;
+	border: 1px solid #efefef;
+	padding: 2%;
+	margin: 2%;
+	background-color: white;
+	border-radius: 5px;
+	text-align: center;
+}
+
+#divpara {
+	width: 100%;
+}
+
+#divImageUn img {
+	width: 90%;
+}
+
+#sectionPanier {
+	display: grid;
+	grid-template-columns: 4fr 1fr;
+}
+
+#sectionPanier article:first-child {
+	grid-row: 1;
+	grid-column: 1;
+}
+
+#sectionPanier article:last-child {
+	grid-row: 1;
+	grid-column: 2;
+	margin: 8%;
+	text-align: center;
+}
+
+#stickyOrder {
+	position: sticky;
+	border: 1px solid #efefef;
+	background-color: white;
+	border-radius: 5px;
+	padding: 10%;
+	top: 55px;
+	border
+}
+
+#sectionPanier article:last-child button {
+	margin-top: 10%;
+}
+
+#buttonNoPromo {
+	border: none;
+}
+
+#divNoPromo {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+}
+
+.panierVide {
+	text-align: center;
+	padding: 5%;
+	border: 1px solid #efefef;
+	background-color: white;
+	border-radius: 5px;
+	width: 80%;
+	margin: auto;
+	margin-top: 8%;
+	margin-bottom: 8%;
+}
+
+.panierVide img {
+	width: 18%;
+}
+
+#buttonNoPromo:hover {
+	transform: scale(0.7);
+	font-weight: bold;
+	cursor: pointer;
+}
+
+#chercherNul {
+	display:flex;
+	text-align: center;
+	padding: 5%;
+	border: 1px solid #efefef;
+	background-color: white;
+	border-radius: 5px;
+	width: 80%;
+	margin: auto;
+	margin-top: 6%;
+	margin-bottom: 6%;
+}
+
+#formModifClient{
+	background-color: white;
+	margin-left:auto;
+	margin-right: auto;
+	border: 1px solid #efefef;
+	background-color: white;
+	border-radius: 5px;
+	margin-top: 3.5%;
+	margin-bottom: 3%;
+	justify-content: center;
+	width:50%;
+	padding-bottom:5px;
+}
+
+#formModifClient div{
+	display:flex-inline;
+	width:100%;
+	margin:0;
+	margin-top:10px;
+}
+
+#formModifClient button{
+	margin-left:auto;
+	margin-right:auto;
+}

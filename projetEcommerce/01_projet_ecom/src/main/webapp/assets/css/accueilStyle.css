@@ -1,0 +1,169 @@
+#boutonChercher2 {
+	grid-row: 1;
+	grid-column: 1/3;
+	text-decoration: none;
+	border: none;
+	background-color: transparent;
+	padding: 0 !important;
+	text-align: right;
+	height: 40px;
+	margin-left: 105px;
+	text-align: right;
+	position: absolute;
+	margin-top: -37px !important;
+}
+
+#inputSearch2 {
+	grid-row: 1;
+	grid-column: 1/3;
+	text-align: left;
+}
+
+.formaccueil {
+	text-align: center;
+	height: 800px;
+	padding: 3%;
+	background-color: white;
+	border: 2px #b3825a solid;
+	border-radius: 5px;
+	grid-row: 2;
+	grid-column: 1;
+	box-shadow: 0 0 3em #000000;
+}
+
+.formaccueil form {
+	padding: 3%;
+}
+
+.elements {
+	display: grid;
+	grid-gap: 20px;
+	margin: 2%;
+	grid-template-columns: 1.5fr 2fr;
+	align-items: center;
+	padding: 0 1% 0 1%;
+}
+
+.tableGestion {
+	grid-row: 2;
+	grid-column: 2;
+	height: 800px;
+	overflow: scroll;
+	border: 2px #b3825a solid;
+	border-radius: 5px;
+	background-color: white;
+	box-shadow: 0 0 3em #000000;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+.tableGestion th, td {
+	padding: 8px;
+	text-align: left;
+	border-bottom: 1px solid #ddd;
+}
+
+.tableGestion tr:hover {
+	background-color: #b3825a;
+}
+
+.tableGestion th {
+	position: sticky;
+	text-align: center;
+}
+
+.tableGestion::-webkit-scrollbar {
+	display: none;
+}
+
+#idTable {
+	width: 100% !important;
+	margin-right: 0 !important;
+	text-align: center;
+}
+
+<!--
+.elementsadmin {
+	display: grid;
+	grid-gap: 20px;
+	justify-content:center !important;
+	
+	align-items: center;
+	padding: 0 1% 0 1%;
+}
+
+#btnSearch {
+	grid-row: 1;
+	grid-column: 1/3;
+	text-align: left;
+}
+
+.tableAdmin {
+	grid-row: 2;
+	grid-column: 1;
+	height: 120px;
+	overflow: scroll;
+	border: 2px #b3825a solid;
+	border-radius: 5px;
+	background-color: white;
+	box-shadow: 0 0 3em #000000;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+.tableAdmin th, td {
+	padding: 8px;
+	text-align: left;
+	border-bottom: 1px solid #ddd;
+}
+
+.tableAdmin tr:hover {
+	background-color: #b3825a;
+}
+
+.tableAdmin th {
+	position: sticky;
+	text-align: center;
+}
+
+.tableAdmin::-webkit-scrollbar {
+	display: none;
+}
+
+.tableAdmin th {
+	position: sticky;
+	text-align: center;
+}
+
+.formaccueiladmin {
+	text-align: center;
+	height: 550px;
+	padding: 3%;
+	background-color: white;
+	border: 2px #b3825a solid;
+	border-radius: 5px;
+	grid-row: 3;
+	grid-column: 1;
+	box-shadow: 0 0 3em #000000;
+}
+
+input[type="radio"] {
+	margin: 0 40px 0 40px;
+}
+
+#ulnavBarAdmin li a:hover {
+	background-color: transparent !important;
+	text-decoration: underline;
+	transform: scale(1.1);
+}
+
+#idImagemodif{
+width: 30% !important;
+height: 30% !important;	
+}
+
+#idImagemodif2{
+width: 50% !important;
+height: 50% !important;	
+}
+

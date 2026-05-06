@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:security="http://www.springframework.org/schema/security"
+	xsi:schemaLocation="http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.2.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+
+	<!-- Spécifier le chemin du fichier data-source.properties (pour la bdd) -->
+	<context:property-placeholder
+		location="classpath*:data-source.properties" /> <!-- classpath : il va le chercher dans le dossier src -->
+
+	<!-- Definir le bean DataSource : c'est un bean qui encapsule les infos 
+		de la bd -->
+	<bean id="dataSourceBean"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+
+		<!-- Injection de dependances via les setters: specifer les infos de la 
+			connexion à la bd -->
+		<property name="url" value="${jdbc.url}" />
+		<property name="driverClassName" value="${jdbc.driver}" />
+		<property name="username" value="${jdbc.user}" />
+		<property name="password" value="${jdbc.mdp}" />
+	</bean>
+	<!-- 1 : la partie autorisation : sert à definir les url protégées et les 
+		autorisation d'accés associé -->
+	<security:http>
+
+		<!-- spécifier les urls protégées et les permission d'accés -->
+		<security:intercept-url pattern="/prod/**"
+			access="ROLE_ADMIN_CAT, ROLE_ADMIN_PROD, ROLE_ADMIN_MASTER" />
+			
+		<!-- spécifier les urls protégées et les permission d'accés -->
+		<security:intercept-url pattern="/cat/**"
+			access="ROLE_ADMIN_CAT,ROLE_ADMIN_MASTER" />
+
+		<security:intercept-url pattern="/master/**"
+			access="ROLE_ADMIN_MASTER" />
+
+		<!-- Utilisation d'un formulaire de connexion généré automatiquement -->
+		<!-- <security:http-basic/> -->
+
+		<!-- Utilisation d'un formulaire perso -->
+		<security:form-login login-page="/login"
+			authentication-failure-url="/echec"
+			login-processing-url="/connection" />
+
+		<!-- Afficher une page perdo dans le casa où l'acce est refuse -->
+		<security:access-denied-handler
+			error-page="/denied" /><!-- Aller à accueil lors de la deconnexion -->
+		<security:logout logout-success-url="/logout"
+			logout-url="/deconnection" />
+	</security:http>
+
+	<!-- 2 : la partie authentification : sert à chercher les users et leurs 
+		rôles dans la bd -->
+	<security:authentication-manager>
+		<security:authentication-provider>
+			<security:jdbc-user-service
+				data-source-ref="
+		dataSourceBean"
+				users-by-username-query="SELECT mail, mdp, active FROM admins WHERE mail=?"
+				authorities-by-username-query="SELECT a.mail, r.rolename FROM admins as a, roles as r WHERE a.r_id=r.id_r AND a.mail=?" />
+		</security:authentication-provider>
+	</security:authentication-manager>
+</beans>

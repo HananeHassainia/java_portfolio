@@ -1,0 +1,47 @@
+@charset "ISO-8859-1";
+
+#divCmd {
+	text-align: right;
+
+	width: 75%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 3%;
+}
+
+#divCmd select {
+	width: 50%;
+	height: 40px;
+		border: 1px solid #efefef;
+			border-radius: 5px;
+		
+	
+}
+
+#divProdHist {
+	display:grid;
+	width: 75%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 3%;
+		border: 1px solid #efefef;
+	padding: 2%;
+	background-color: white;
+		border-radius: 5px;
+	
+}
+
+.formAff{
+margin-bottom:2%;	
+}
+
+.qtPrix{
+	color:black !important;
+}
+
+#separationhist{
+	border-bottom: 1px solid #c0c0c0;
+	width: 100%;
+	margin-bottom: 2%;
+	text-align: center;
+}
